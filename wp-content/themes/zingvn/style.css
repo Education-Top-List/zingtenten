@@ -42,13 +42,18 @@ img{
     height: auto;
 }
 .thumbnail{
-        overflow: hidden;
+       overflow: hidden;
     padding: 0px;
     border: none;
     background: none;
     border-radius: 0px;
-    margin:0px;
+    margin: 0px;
     position: relative;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    transition: all 0.5s;
+    height: 100%;
 }
 .nav_primary ul li {
     float:left;
@@ -231,8 +236,8 @@ float: left;
 margin:0px 0px 5px 0px;
 }
  .item_list_hot h2 a{
-    font-size: 15px;
-    line-height: 21px;
+   font-size: 13px;
+    line-height: 20px;
     display: inline-block;
     font-weight: 700;
     color: #000;
@@ -253,14 +258,22 @@ margin:0px 0px 5px 0px;
 .hot_big_post_area{
         margin: 0px 0px 40px 0px;
 }
+.hot_big_post_area .col-md-9{
+    border-right: 1px solid #e6e6e6;
+}
+.hot_big_post_area .hot_big_post  .thumbnail {
+    height: 300px;
+}
 .item_list_hot figure{
     margin:0px 0px 10px 0px;
+    height: 150px;
 }
 .post_wrapper_content{
     display: table;
 }
  .item_list_hot{
-    margin:0px 0px 20px 0px;
+       margin: 0px;
+    padding: 0px 10px;
 }
 
 .pw:hover h2 a , .widget_area a:hover{
@@ -556,6 +569,9 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
 
 
 /* SLICK SLIDE */
+.slick-slider{
+    margin:0px !important;
+}
 .slick-slide img{
     display: table;
     margin:0px auto;
@@ -573,14 +589,14 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     content:"" !important;
 }
 .slick-prev:before {
-    content: "\f104" !important;
+ content: "\f104" !important;
     font: normal normal normal 14px/1 FontAwesome !important;
-    font-size: 28px !important;
+    font-size: 22px !important;
     background: #f0a52b;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     display: inline-block;
-    line-height: 35px !important;
+    line-height: 30px !important;
     color: #fff !important;
     /* padding: 23px 0px; */
     border-radius: 20px;
@@ -588,18 +604,18 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
 .slick-next:before {
  content: "\f105" !important;
     font: normal normal normal 14px/1 FontAwesome !important;
-    font-size: 28px !important;
+    font-size: 22px !important;
     background: #f0a52b;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     display: inline-block;
-    line-height: 35px !important;
+    line-height: 30px !important;
     color: #fff !important;
     padding: 0px 0px;
     border-radius: 20px;
 }
 .slick-prev {
-    left: -40px !important;
+    left: -10px !important;
 }
 .slick-next {
     right: -12px !important;
@@ -689,6 +705,77 @@ body.search-results .title_header strong{
     color:#f0a52b;
 }
 
+.news_scroll .post_cmt_wrapper .wrap_thumb{
+    height: 130px;
+    margin: 0px 0px 10px 0px;
+}
+.news_scroll{
+        max-height: 700px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.news_scroll::-webkit-scrollbar {
+    width: 1px;
+}
+ 
+.news_scroll::-webkit-scrollbar-track {
+    background:none;
+
+}
+ 
+.news_scroll::-webkit-scrollbar-thumb {
+  background-color: #f0a52b;
+  outline: 1px solid #f0a52b;
+  height: 50px;
+border-radius: 10px;
+  display: none;
+}
+.news_scroll>span {
+        text-align: center;
+    display: block;
+    color: #fff;
+    background: #f0a52b;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.news_scroll h3 a {
+    font-size: 13px;
+    line-height: 22px;
+    display: inline-block;
+    color: #000;
+}
+.news_scroll h3 a:hover{
+    color:#f0a52b;
+}
+.news_scroll h3{
+    margin:0px;
+}
+.news_scroll ul>li:first-child {
+    border-bottom: 1px solid #e6e6e6;
+    padding:0px 0px 10px 0px;
+    margin:0px 0px 10px 0px;
+}
+.news_scroll ul>li:not(:first-child) .wrap_thumb{
+    display: none;
+}
+.news_scroll ul>li:not(:first-child){
+    padding:0px 0px 0px 10px;
+    position: relative;
+}
+.news_scroll ul>li:not(:first-child)::before{
+        position: absolute;
+    left: 0px;
+    content: "";
+    width: 5px;
+    top: 7px;
+    height: 5px;
+    border-radius: 50%;
+    background: #f0a52b;
+}
+.news_scroll ul>li{
+    margin:0px 0px 5px 0px;
+}
 /* CSS FOOTER */
 .footer{
     border-top: 2px solid #f0a52b;

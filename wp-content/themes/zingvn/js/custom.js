@@ -21,7 +21,7 @@
 		 }); 
 			// SLIDE
 		jQuery('.list_hot_post_others').slick({
-			dots: true,
+			dots: false,
 			infinite: true,
 			speed: 300,
 			slidesToShow: 3,

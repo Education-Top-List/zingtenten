@@ -310,6 +310,34 @@ add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
 //add_filter('page_row_actions', 'rd_duplicate_post_link', 10, 2);
 
   define('BASE_URL', get_site_url('null','/wp-content/themes/zingvn', 'http'));
+
+
+
+//view 
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 1;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '1');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+function wpb_get_post_views($postID){
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '1');
+        return "1";
+    }
+    return $count.'';
+}
+//end view
 ?>
 
 

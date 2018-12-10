@@ -6,6 +6,7 @@ get_header();
 
 <div id="wrap">
 	<div class="g_content">
+		<?php wpb_set_post_views(get_the_ID()); ?>
 		<div class="container">
 			<div class="row">
 				<?php 
