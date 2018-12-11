@@ -776,6 +776,72 @@ border-radius: 10px;
 .news_scroll ul>li{
     margin:0px 0px 5px 0px;
 }
+
+.multimedia{
+    max-width: 1200px;
+    width: 100%;
+    margin:0px auto;
+    display: table;
+    background:#ffde76;
+    padding:30px;
+}
+.multimedia .content_multi ul li .wrap_thumb{
+    height: 150px;
+    margin:0px 0px 10px 0px;
+}
+
+.multimedia .content_multi ul li {
+    margin:0px 0px 30px 0px;
+    position: relative;
+}
+.multimedia ul li  h2.post_title a{
+        font-size: 16px;
+    line-height: 25px;
+}
+.multimedia .list_categories li{
+      float: left;
+    padding: 0px 10px;
+}
+.multimedia .content_multi  ul>li:nth-child(3) {
+    width: 50%;
+}
+.multimedia .content_multi ul>li:nth-child(3) h2.post_title{
+     position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: #fff;
+    padding: 10px;
+    line-height: 15px;
+    display: inline-block;
+    max-width: 90%;
+}
+.multimedia .content_multi ul>li:nth-child(3) h2.post_title a{
+    font-size: 20px;
+    line-height: 28px;
+    display: inline-block;
+}
+.multimedia .content_multi ul>li:nth-child(3) .wrap_thumb{
+    height: 250px;
+}
+.multimedia>h4{
+ float: left;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0px 0px 30px 0px;
+}
+.multimedia ul.list_categories{
+    float:right;
+    border:none;
+}
+.multimedia ul.list_categories li a{
+color: #000;
+    font-size: 20px;
+    font-weight: normal;
+}
+.content_multi{
+    clear: both;
+}
 /* CSS FOOTER */
 .footer{
     border-top: 2px solid #f0a52b;
