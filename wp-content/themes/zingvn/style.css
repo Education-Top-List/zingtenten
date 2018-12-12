@@ -1,7 +1,7 @@
 /*
 Theme Name: Zingvn
-Author: HoÃ ng TrÆ°á»ng Giang - 0363349096
-Description: Láº­p trÃ¬nh viÃªn Front End, chuyÃªn cáº¯t html, css, responsive website. 
+Author: HoÃƒÆ’Ã‚Â ng TrÃƒâ€ Ã‚Â°ÃƒÂ¡Ã‚Â»Ã‚Âng Giang - 0363349096
+Description: LÃƒÂ¡Ã‚ÂºÃ‚Â­p trÃƒÆ’Ã‚Â¬nh viÃƒÆ’Ã‚Âªn Front End, chuyÃƒÆ’Ã‚Âªn cÃƒÂ¡Ã‚ÂºÃ‚Â¯t html, css, responsive website. 
 Version: 1.0
 Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 This theme, like WordPress, is licensed under the GPL.
@@ -222,11 +222,60 @@ float: left;
 .list_post_content .list_post_item:last-child{
     border-bottom: none;
 }
-.list_post_item .thumbnail{
-        margin: 0px 30px 0px 0px;
+.list_post_category_arc>li:nth-child(3n+1) .wrap_thumb{
+        height: 100px;
+        max-width: 150px;
+        float: left;
+        width: 100%;
+        margin: 0px 12px 0px 0px;
+}
+ .list_post_category_arc>li:not(:nth-child(3n+1)) .excerpt {
+    display: none;
+}
+ .list_post_category_arc>li:not(:nth-child(3n+1))  .post_meta {
+    display: none;
+}
+.list_post_category_arc>li:nth-child(3n+1) .post_wrapper_content {
     float: left;
-    max-width: 300px;
-    max-height: 210px;
+    max-width: 250px;
+}
+.list_post_category_arc>li {
+    display: table;
+}
+.list_post_category_arc>li:not(:nth-child(3n+1)) a {
+         font-size: 13px;
+    line-height: 20px;
+    display: inline-block;
+    position: relative;
+    padding: 0px 0px 0px 10px;
+    max-height: 60px;
+    overflow: hidden;
+}
+.list_post_category_arc>li:not(:nth-child(3n+1)) a::before{
+    position: absolute;
+    left: 0px;
+    content: "";
+    width: 5px;
+    top: 7px;
+    height: 5px;
+    border-radius: 50%;
+    background: #f0a52b;
+}
+.list_post_category_arc>li:not(:nth-child(3n+1)) .wrap_thumb{
+    display: none;
+}
+.list_post_category_arc>li:nth-child(3n+1) {
+     float: left;
+    width: 68%;
+    min-height: 165px;
+    border-right: 1px solid #e6e6e6;
+    margin: 0px 10px 30px 0px;
+}
+.list_post_category_arc>li:nth-child(5n) {
+    margin:40px 0px 0px 0px;
+}
+.list_post_item:last-child{
+    border-bottom: none;
 }
 .list_post_item .thumbnail img{
     max-width: 100%;
@@ -281,9 +330,9 @@ margin:0px 0px 5px 0px;
 }
 
 h2.post_title a{
-        font-size: 20px;
-    color: #000;
-    line-height: 27px;
+    font-size: 15px;
+    line-height: 23px;
+    color:#000;
     display: inline-block;
     font-weight: 700;
 }
@@ -296,16 +345,7 @@ h2.post_title {
 .excerpt p{
     font-size: 13px;
 }
-.list_post_item{
-    clear: both;
-    /* margin: 0px 0px 30px 0px; */
-    display: table;
-    border-bottom: 1px dashed #e6e6e6;
-    padding: 25px 0px;
-}
-.list_post_item:last-child{
-    border-bottom: none;
-}
+
 li.widget{
     display: block !important;
 }
@@ -458,7 +498,8 @@ img.size-full{
     max-width: 100%;
 }
 ul.list_categories{
-    border-bottom: 1px solid #f0a52b;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0px 0px 20px 0px;
 }
 ul.list_categories li{
     display: inline-block;
@@ -845,21 +886,28 @@ color: #000;
 .wrap_list_idx .listing .list_subcat{
 
 margin: 0px 0px 20px 0px;
+
+padding: 0px 0px 8px 0px;
+
+border-bottom: 1px solid #e6e6e6;
+
+box-shadow: 0 4px 6px -6px #2f2c2c;
 }
 .wrap_list_idx .listing .list_subcat h2{
     margin: 0px;
     display: inline-block;
     padding: 0px 10px 0px 0px;
     position: relative;
+    line-height: 17px;
 }
 .wrap_list_idx .listing .list_subcat h2::before{
       content: "";
-    position: absolute;
-    width: 1px;
-    height: 20px;
-    background: #c5c5c5;
-    right: 0px;
-    top: 12px;
+      position: absolute;
+      width: 1px;
+      height: 20px;
+      background: #c5c5c5;
+      right: 0px;
+      top: 4px;
 }
 .wrap_list_idx .listing .list_subcat h2 a{
 
@@ -891,21 +939,22 @@ display: inline-block;
     display: none;
     float:left;
 }
+.wrap_list_idx .listing  .list_post_category>li:not(:first-child) .post_meta{
+    display: none;
+}
 .wrap_list_idx .listing  .list_post_category>li:not(:first-child) .excerpt{
     display: none;
 }
-.wrap_list_idx .listing  .list_post_category>li:not(:first-child) a{
-      font-size: 13px;
+.wrap_list_idx .listing  .list_post_category>li:not(:first-child) h2.post_title a{
+  font-size: 13px;
     line-height: 20px;
+    display: inline-block;
+    position: relative;
+    padding: 0px 0px 0px 10px;
     max-height: 60px;
     overflow: hidden;
 }
-.wrap_list_idx .listing  .list_post_category>li:not(:first-child) h2.post_title{
-    margin:0px;
-    padding:0px 0px 0px 10px;
-    position: relative;
-}
-.wrap_list_idx .listing  .list_post_category>li:not(:first-child) h2.post_title::before{
+.wrap_list_idx .listing  .list_post_category>li:not(:first-child) h2.post_title a::before{
         position: absolute;
     left: 0px;
     content: "";
@@ -914,6 +963,13 @@ display: inline-block;
     height: 5px;
     border-radius: 50%;
     background: #f0a52b;
+}
+.wrap_list_idx .listing  .list_post_category>li:not(:first-child) h2.post_title{
+    margin:0px;
+}
+
+.wrap_list_idx .listing  .list_post_category>li:not(:first-child) {
+    margin:0px 0px 5px 0px;
 }
 .wrap_list_idx .listing  .list_post_category>li:first-child{
       float: left;

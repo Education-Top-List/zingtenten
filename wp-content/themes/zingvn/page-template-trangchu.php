@@ -207,7 +207,7 @@
                           <?php while ( $query->have_posts() ) {
                            $query->the_post();
                            ?>
-                        <li id="post-<?php the_ID(); ?>" <?php //post_class( 'category-listing' ); ?> class="list_post_category_item">
+                        <li id="post-<?php the_ID(); ?>" <?php //post_class( 'category-listing' ); ?> class="list_post_category_item pw">
                            <?php if ( has_post_thumbnail() ) { ?>
                              <div class="wrap_thumb">
                         <?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
@@ -222,6 +222,10 @@
                               <?php the_title(); ?>
                               </a>
                            </h2>
+                            <div class="post_meta">
+        <p><?php the_time('d/m/Y');?><span>  <?php the_time('g:i a') ?></span> <!-- | by <a href="<?php //echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php //the_author(); ?></a> -->
+        </p>
+      </div>
                            <div class="excerpt">
                 <p><?php echo excerpt(30); ?></p>
               </div>
