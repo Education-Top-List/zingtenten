@@ -126,9 +126,13 @@ if(have_posts()) {
 									<div class="col-sm-3 ">
 										<div class="news_scroll">
 											<span>Xem nhiều</span>
-
+											<?php $category = get_queried_object();
+													echo $category->term_id;
+											?>
 											<?php 
+
 											$arg_cmt_post_q = array(
+												'cat' => $category->term_id,
 												'posts_per_page' => 10,
 												'orderby' => 'post_date',
 												'order' => 'DESC',

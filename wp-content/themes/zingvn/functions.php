@@ -338,6 +338,49 @@ function wpb_get_post_views($postID){
     return $count.'';
 }
 //end view
+
+class ListCategories{
+  static function list_categories($atts, $content = null) {
+    $atts = shortcode_atts(
+      array(
+        'show_option_all'    => '',
+        'orderby'            => 'name',
+        'order'              => 'ASC',
+        'style'              => 'list',
+        'show_count'         => 0,
+        'hide_empty'         => 1,
+        'use_desc_for_title' => 1,
+        'child_of'           => 0,
+        'feed'               => '',
+        'feed_type'          => '',
+        'feed_image'         => '',
+        'exclude'            => '',
+        'exclude_tree'       => '',
+        'include'            => '',
+        'hierarchical'       => 1,
+        'title_li'           => __( '' ),
+        'show_option_none'   => __( '' ),
+        'number'             => null,
+        'echo'               => 1,
+        'depth'              => 1,
+        'current_category'   => 1,
+        'pad_counts'         => 0,
+        'taxonomy'           => 'category',
+        'walker'             => null
+      ), $atts
+    );
+
+    ob_start();
+    wp_list_categories($atts);
+    $output = ob_get_contents();
+    ob_end_clean();
+    return $output;
+  }
+}
+
+add_shortcode( 'list_catgory', array('ListCategories', 'list_categories') );
+
+
 ?>
 
 

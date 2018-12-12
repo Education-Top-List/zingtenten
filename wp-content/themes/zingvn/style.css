@@ -1,14 +1,14 @@
 /*
 Theme Name: Zingvn
-Author: Hoàng Trường Giang - 0363349096
-Description: Lập trình viên Front End, chuyên cắt html, css, responsive website. 
+Author: HoÃ ng TrÆ°á»ng Giang - 0363349096
+Description: Láº­p trÃ¬nh viÃªn Front End, chuyÃªn cáº¯t html, css, responsive website. 
 Version: 1.0
 Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 This theme, like WordPress, is licensed under the GPL.
 */
 
 
-ul{
+ul,li{
     padding:0px;
     margin:0px;
     list-style:none;
@@ -780,7 +780,7 @@ border-radius: 10px;
 .multimedia{
     max-width: 1200px;
     width: 100%;
-    margin:0px auto;
+    margin: 0px auto 40px auto;
     display: table;
     background:#ffde76;
     padding:30px;
@@ -841,6 +841,104 @@ color: #000;
 }
 .content_multi{
     clear: both;
+}
+.wrap_list_idx .listing .list_subcat{
+
+margin: 0px 0px 20px 0px;
+}
+.wrap_list_idx .listing .list_subcat h2{
+    margin: 0px;
+    display: inline-block;
+    padding: 0px 10px 0px 0px;
+    position: relative;
+}
+.wrap_list_idx .listing .list_subcat h2::before{
+      content: "";
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background: #c5c5c5;
+    right: 0px;
+    top: 12px;
+}
+.wrap_list_idx .listing .list_subcat h2 a{
+
+font-size: 16px;
+}
+.wrap_list_idx .listing{
+    clear: both;
+    display: block;
+    border-bottom: 1px solid  #2f8fd2;
+    padding:5px 0px 15px 0px;
+}
+.wrap_list_idx .listing:last-child{
+    border-bottom: none;
+}
+.wrap_list_idx .listing .list_subcat ul{
+display: inline-block;
+}
+
+.wrap_list_idx .listing .list_subcat ul li{
+    margin: 0px 10px;
+    display: inline-block;
+    position: relative;
+}
+.wrap_list_idx .listing .list_subcat ul li::before{
+    position: absolute;
+}
+.wrap_list_idx .listing .list_post_category {display: table;clear: both;width: 100%;}
+.wrap_list_idx .listing  .list_post_category>li:not(:first-child) .wrap_thumb  {
+    display: none;
+    float:left;
+}
+.wrap_list_idx .listing  .list_post_category>li:not(:first-child) .excerpt{
+    display: none;
+}
+.wrap_list_idx .listing  .list_post_category>li:not(:first-child) a{
+      font-size: 13px;
+    line-height: 20px;
+    max-height: 60px;
+    overflow: hidden;
+}
+.wrap_list_idx .listing  .list_post_category>li:not(:first-child) h2.post_title{
+    margin:0px;
+    padding:0px 0px 0px 10px;
+    position: relative;
+}
+.wrap_list_idx .listing  .list_post_category>li:not(:first-child) h2.post_title::before{
+        position: absolute;
+    left: 0px;
+    content: "";
+    width: 5px;
+    top: 7px;
+    height: 5px;
+    border-radius: 50%;
+    background: #f0a52b;
+}
+.wrap_list_idx .listing  .list_post_category>li:first-child{
+      float: left;
+    width: 68%;
+    min-height: 165px;
+    border-right: 1px solid #e6e6e6;
+    margin: 0px 10px 0px 0px;
+}
+.wrap_list_idx .listing  .list_post_category>li:first-child .post_wrap_content{
+     float: left;
+    max-width: 310px;
+}
+.wrap_list_idx .listing  .list_post_category>li .wrap_thumb{
+    height: 150px;
+    max-width: 220px;
+    float: left;
+    width: 100%;
+    margin: 0px 20px 0px 0px;
+}
+.wrap_list_idx .listing  .list_post_category>li{
+display: table;
+}
+.wrap_list_idx .listing  .list_post_category li a{
+    font-size: 15px;
+    line-height: 23px;
 }
 /* CSS FOOTER */
 .footer{

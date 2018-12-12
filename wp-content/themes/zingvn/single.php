@@ -35,6 +35,7 @@ get_header();
 											echo trim($output , $seperator);
 										}
 										?>
+										| Lượt xem <?php echo wpb_get_post_views(get_the_ID()); ?>
 									</p>
 								</div>
 								<div class="post_avt">
