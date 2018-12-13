@@ -10,8 +10,6 @@
       <h2 class="post_title"><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
       <div class="post_meta">
         <p><?php the_time('d/m/y');?><span>  <?php the_time('g:i a') ?></span> <!-- | by <a href="<?php //echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php //the_author(); ?></a> -->
- 
-          
         </p>
       </div>
 

@@ -127,6 +127,7 @@
                               while(have_posts()): the_post();
                               	get_template_part('loop/loop_post_category');
                               endwhile;  
+                                get_template_part('includes/pagination'); 
                               wp_reset_postdata();
                               ?>
                         </ul>
@@ -176,6 +177,7 @@
             </div>
             <?php } ?>
          </div>
+
       </div>
    </div>
 </div>

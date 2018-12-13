@@ -16,14 +16,14 @@
 	<meta property="fb:app_id" content="1953938748210615">
 	<meta property="fb:app_admins" content="1993613924220223">
 </head>
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1&appId=1953938748210615&autoLogAppEvents=1';
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1&appId=1953938748210615&autoLogAppEvents=1';
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <body <?php body_class() ?>>
 	
 	<header class="header">
@@ -48,10 +48,11 @@
 				</nav>
 				<div class="search_header">
 					<?php //get_search_form(); ?>
-					<form action="" role="search" method="get" id="searchform" action="<?php echo home_url('/');  ?>">
-						<div class="search">
-							<input type="text" value="" name="s" id="s" placeholder="Tìm kiếm">
-							<button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+
+					<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<div class="wrap_search_f">
+							<input type="text" name="s" id="s" value="<?php the_search_query(); ?>" placeholder="Tìm kiếm" />
+							<input type="submit" id="searchsubmit" value=""><i class="fa fa-search"></i>
 						</div>
 					</form>
 				</div>

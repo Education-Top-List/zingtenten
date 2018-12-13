@@ -445,6 +445,18 @@ class Sassy_Social_Share_Admin {
 	}
 
 	/**
+	 * Save Twitcount notification flag in DB
+	 *
+	 * @since    3.2.9
+	 */
+	public function twitcount_notification_read() {
+
+		update_option( 'heateor_sss_twitcount_notification_read', '1' );
+		die;
+	
+	}
+
+	/**
 	 * Save GDPR notification flag in DB
 	 *
 	 * @since    3.2.1
@@ -522,6 +534,29 @@ class Sassy_Social_Share_Admin {
 						</div>
 						<?php
 					}
+
+					if ( ! get_option( 'heateor_sss_twitcount_notification_read' ) ) {
+						?>
+						<script type="text/javascript">
+						function heateorSssTwitcountNotificationRead(){
+							jQuery.ajax({
+								type: 'GET',
+								url: '<?php echo get_admin_url() ?>admin-ajax.php',
+								data: {
+									action: 'heateor_sss_twitcount_notification_read'
+								},
+								success: function(data, textStatus, XMLHttpRequest){
+									jQuery('#heateor_sss_twitcount_notification').fadeOut();
+								}
+							});
+						}
+						</script>
+						<div id="heateor_sss_twitcount_notification" class="update-nag">
+							<h3>Sassy Social Share</h3>
+							<p><?php echo sprintf( __( 'Now plugin supports a new service Twitcount.com to show Twitter shares. To continue showing the Twitter shares, click "Give me my Twitter counts back" button at <a href="%s" target="_blank">their website</a> and register your website %s with them. No need to copy-paste any code from their website.', 'sassy-social-share' ), 'http://twitcount.com', home_url() ); ?><input type="button" onclick="heateorSssTwitcountNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e( 'Okay', 'sassy-social-share' ) ?>" /></p>
+						</div>
+						<?php
+					}
 				}
 
 				if ( ! get_option( 'heateor_sss_gdpr_notification_read' ) ) {
@@ -558,15 +593,17 @@ class Sassy_Social_Share_Admin {
 	 */
 	public function add_links( $links ) {
 	    
-	    $addons_link = '<a href="https://www.heateor.com/add-ons" target="_blank">' . __( 'Add-Ons', 'sassy-social-share' ) . '</a>';
-	    $support_link = '<a href="http://support.heateor.com" target="_blank">' . __( 'Support Documentation', 'sassy-social-share' ) . '</a>';
-	    $settings_link = '<a href="admin.php?page=heateor-sss-options">' . __( 'Settings', 'sassy-social-share' ) . '</a>';
-	    
-	    // place it before other links
-		array_unshift( $links, $settings_link );
-		
-		$links[] = $addons_link;
-		$links[] = $support_link;
+	    if ( is_array( $links ) ) {
+		    $addons_link = '<a href="https://www.heateor.com/add-ons" target="_blank">' . __( 'Add-Ons', 'sassy-social-share' ) . '</a>';
+		    $support_link = '<a href="http://support.heateor.com" target="_blank">' . __( 'Support Documentation', 'sassy-social-share' ) . '</a>';
+		    $settings_link = '<a href="admin.php?page=heateor-sss-options">' . __( 'Settings', 'sassy-social-share' ) . '</a>';
+		    
+		    // place it before other links
+			array_unshift( $links, $settings_link );
+			
+			$links[] = $addons_link;
+			$links[] = $support_link;
+		}
 		
 		return $links;
 
@@ -594,6 +631,17 @@ class Sassy_Social_Share_Admin {
 				heateor_sss_update_svg_css( $this->options['vertical_font_color_hover'], 'sassy-social-share-hover-svg-vertical' );
 			}
 			
+			if ( version_compare( '3.2.6', $current_version ) > 0 ) {
+				$networks_to_remove = array( 'yahoo', 'Yahoo_Messenger', 'delicious', 'Polyvore', 'Oknotizie', 'Baidu', 'diHITT', 'Netlog', 'NewsVine', 'NUjij', 'Segnalo', 'Stumpedia', 'YouMob' );
+				if ( $this->options['vertical_re_providers'] ) {
+					$this->options['vertical_re_providers'] = array_diff( $this->options['vertical_re_providers'], $networks_to_remove );
+				}
+				if ( $this->options['horizontal_re_providers'] ) {
+					$this->options['horizontal_re_providers'] = array_diff( $this->options['horizontal_re_providers'], $networks_to_remove );
+				}
+				update_option( 'heateor_sss', $this->options );
+			}
+
 			if ( version_compare( '3.2.5', $current_version ) > 0 ) {
 				$this->options['tweet_count_service'] = 'opensharecount';
 				update_option( 'heateor_sss', $this->options );

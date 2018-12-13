@@ -3,8 +3,8 @@ Contributors: Heateor
 Donate link: https://www.heateor.com/donate/?action=Sassy+Social+Share
 Tags: social share, social sharing, social media share, share facebook, facebook social share, wordpress social share, share buttons, social share buttons, facebook like, twitter tweet, google +1, google plus share
 Requires at least: 2.5.0
-Tested up to: 4.9.8
-Stable tag: 3.2.5
+Tested up to: 5.0
+Stable tag: 3.2.9
 License: GPLv2 or later
 
 Slickest, Simplest and Optimized Share buttons. Facebook, Twitter, Google+, Pinterest, WhatsApp and over 100 more.
@@ -21,6 +21,7 @@ This is the Simplest and Smoothest Social Sharing plugin with optimized and grea
 
 = Feature list =
 * GDPR Compliant
+* Compatible with Gutenberg editor
 * Around **100 Social Sharing/Bookmarking** services
 * Social Media follow icons (Redirect website visitors to your Social Media pages)
 * Share counts are supported for Facebook, Linkedin, Twitter, Buffer, Reddit, Pinterest, Odnoklassniki and Vkontakte
@@ -122,6 +123,37 @@ Yes, we can help you with it. Just drop an email at support[at]heateor[dot]com
 4. **Universal Sharing Popup**: Universal Sharing popup having all the supported sharing and bookmarking services
 
 == Changelog ==
+= 3.2.9 =
+* [Bugfix] Added TwitCount.com service to get Twitter share counts working again
+
+= 3.2.8 =
+* [Bugfix] Pinterest shares disappeared due to changes in Pinterest API
+
+= 3.2.7 =
+* [Bugfix] Hover icon color was not working for Instagram, StockTwits, GentleReader and Mix social share logos (thanks danira-horses.ru)
+
+= 3.2.6 =
+* [Bugfix] Follow Icons widget was breaking layout of webpage in a few cases
+* [Bugfix] Broken "Plugins" page in admin area on multisite installation in some cases
+* [Bugfix] Fixed PHP warning "Division by zero..." in "public/class-sassy-social-share-public.php"
+* [Bugfix] StockTwits was not there with the other social networks appearing in the "More" share networks popup
+* [New] Added Threema
+* [Improvement] Improved StockTwits logo
+* [Improvement] Whatsapp icon was triggering share in the same browser tab instead of another tab
+* Removed Yahoo Bookmarks
+* Removed Yahoo Messenger
+* Removed Delicious
+* Removed Polyvore
+* Removed Oknotizie
+* Removed Baidu
+* Removed DiHITT
+* Removed Netlog
+* Removed NewsVine
+* Removed NUjij
+* Removed Segnalo
+* Removed Stumpedia
+* Removed YouMob
+
 = 3.2.5 =
 * [Bugfix] Twitter share counts disappeared as newsharecounts.com went dead
 
@@ -567,3 +599,34 @@ Yes, we can help you with it. Just drop an email at support[at]heateor[dot]com
 
 = 3.2.5 =
 * [Bugfix] Twitter share counts disappeared as newsharecounts.com went dead
+
+= 3.2.6 =
+* [Bugfix] Follow Icons widget was breaking layout of webpage in a few cases
+* [Bugfix] Broken "Plugins" page in admin area on multisite installation in some cases
+* [Bugfix] Fixed PHP warning "Division by zero..." in "public/class-sassy-social-share-public.php"
+* [Bugfix] StockTwits was not there with the other social networks appearing in the "More" share networks popup
+* [New] Added Threema
+* [Improvement] Improved StockTwits logo
+* [Improvement] Whatsapp icon was triggering share in the same browser tab instead of another tab
+* Removed Yahoo Bookmarks
+* Removed Yahoo Messenger
+* Removed Delicious
+* Removed Polyvore
+* Removed Oknotizie
+* Removed Baidu
+* Removed DiHITT
+* Removed Netlog
+* Removed NewsVine
+* Removed NUjij
+* Removed Segnalo
+* Removed Stumpedia
+* Removed YouMob
+
+= 3.2.7 =
+* [Bugfix] Hover icon color was not working for Instagram, StockTwits, GentleReader and Mix social share logos (thanks danira-horses.ru)
+
+= 3.2.8 =
+* [Bugfix] Pinterest shares disappeared due to changes in Pinterest API
+
+= 3.2.9 =
+* [Bugfix] Added TwitCount.com service to get Twitter share counts working again

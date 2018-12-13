@@ -76,11 +76,6 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		locale: "en-US",
 		redirect_url: "https://papaly.com/api/share.html?url="+postUrl+"&title="+postTitle
 	  },
-	  Polyvore: {
-		title: "Polyvore",
-		locale: "en-US",
-		bookmarklet_url: "javascript:(function(){function e(a){var c=window;if(c.PolyvoreClipper){c.PolyvoreClipper.run()}else{var b=a.createElement(\'script\');c._polyvoreMode=\'prod\';c._polyvoreHost=\'www.polyvore.com\';b.src=\'http://akwww.polyvorecdn.com/rsrc/clipper.js?\'+Math.floor((new Date()).getTime()/86400000);a.body.appendChild(b)}}try{e(document)}catch(g){}for(var f=0;f<frames.length;++f){var i=frames[f];try{if(i.frameElement.tagName==\'IFRAME\'){continue}if(i.innerWidth<400||i.innerHeight<400){continue}e(i.document)}catch(j){}}})();"
-	  },
 	  Refind: {
 		title: "Refind",
 		locale: "en-US",
@@ -106,25 +101,20 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		locale: "en-US",
 		bookmarklet_url: "viber://forward?text="+postTitle+" "+postUrl
 	  },
+	  Threema: {
+		title: "Threema",
+		locale: "en-US",
+		bookmarklet_url: "threema://compose?text="+postTitle+" "+postUrl
+	  },
 	  Telegram: {
 		title: "Telegram",
 		locale: "en-US",
 		redirect_url: "https://telegram.me/share/url?url="+postUrl+"&text="+postTitle
 	  },
-	  yahoo_bookmarks: {
-		title: "Yahoo",
-		locale: "en-US",
-		redirect_url: "http://bookmarks.yahoo.com/toolbar/savebm?u=" + postUrl + "&t=" + postTitle,
-	  },
 	  email: {
 		title: "Email",
 		locale: "en-US",
 		redirect_url: "mailto:?subject=" + postTitle + "&body=Link: " + postUrl,
-	  },
-	  delicious: {
-		title: "Delicious",
-		locale: "en-US",
-		redirect_url: "http://delicious.com/save?url=" + postUrl + "&title=" + postTitle,
 	  },
 	  reddit: {
 		title: "Reddit",
@@ -245,20 +235,10 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		locale: "en-US",
 		redirect_url: "http://share.aim.com/share/?url=" + postUrl + "&title=" + postTitle,
 	  },
-	  stumpedia: {
-		title: "Stumpedia",
-		locale: "en-US",
-		redirect_url: "http://www.stumpedia.com/submit?url=" + postUrl + "&title=" + postTitle,
-	  },
 	  viadeo: {
 		title: "Viadeo",
 		locale: "en-US",
 		redirect_url: "http://www.viadeo.com/shareit/share/?url=" + postUrl + "&title=" + postTitle,
-	  },
-	  yahoo_messenger: {
-		title: "Yahoo Messenger",
-		locale: "en-US",
-		redirect_url: "ymsgr:sendim?m=" + postUrl,
 	  },
 	  pinboard_in: {
 		title: "Pinboard",
@@ -310,11 +290,6 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		locale: "en-US",
 		redirect_url: "https://account.app.net/login/",
 	  },
-	  baidu: {
-		title: "Baidu",
-		locale: "en-US",
-		redirect_url: "http://cang.baidu.com/do/add?it=" + postTitle + "&iu=" + postUrl,
-	  },
 	  balatarin: {
 		title: "Balatarin",
 		locale: "en-US",
@@ -364,11 +339,6 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		title: "Diary.Ru",
 		locale: "en-US",
 		redirect_url: "http://www.diary.ru/?newpost&title=" + postTitle + "&text=" + postUrl,
-	  },
-	  diHITT: {
-		title: "diHITT",
-		locale: "en-US",
-		redirect_url: "http://www.dihitt.com/submit?url=" + postUrl + "&title=" + postTitle,
 	  },
 	  dzone: {
 		title: "DZone",
@@ -445,35 +415,15 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		locale: "en-US",
 		redirect_url: "https://myspace.com/post?u=" + encodeURIComponent(postUrl) + "&t=" + postTitle + "&l=3&c=" + postTitle,
 	  },
-	  Netlog: {
-		title: "Netlog",
-		locale: "en-US",
-		redirect_url: "http://www.netlog.com/go/manage/links/view=save&origin=external&url=" + postUrl + "&title=" + postTitle + "&description=",
-	  },
 	  Netvouz: {
 		title: "Netvouz",
 		locale: "en-US",
 		redirect_url: "http://www.netvouz.com/action/submitBookmark?url=" + postUrl + "&title=" + postTitle + "&popup=no&description=",
 	  },
-	  NewsVine: {
-		title: "NewsVine",
-		locale: "en-US",
-		redirect_url: "http://www.newsvine.com/_tools/seed?popoff=0&u=" + postUrl + "&h=" + postTitle,
-	  },
-	  NUjij: {
-		title: "NUjij",
-		locale: "en-US",
-		redirect_url: "http://www.nujij.nl/nieuw-bericht.2051051.lynkx?title=" + postTitle + "&url=" + postUrl + "&bericht=&topic=",
-	  },
 	  Odnoklassniki: {
 		title: "Odnoklassniki",
 		locale: "en-US",
 		redirect_url: "https://connect.ok.ru/dk?cmd=WidgetSharePreview&st.cmd=WidgetSharePreview&st.shareUrl=" + postUrl + "&st.client_id=-1",
-	  },
-	  Oknotizie: {
-		title: "Oknotizie",
-		locale: "en-US",
-		redirect_url: "//oknotizie.virgilio.it/post?url=" + postUrl + "&title=" + postTitle,
 	  },
 	  Outlook_com: {
 		title: "Outlook.com",
@@ -505,11 +455,6 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		locale: "en-US",
 		redirect_url: "//www.connect.renren.com/share/sharer?url=" + postUrl + "&title=" + postTitle,
 	  },
-	  Segnalo: {
-		title: "Segnalo",
-		locale: "en-US",
-		redirect_url: "http://segnalo.virgilio.it/post.html.php?url=" + postUrl + "&title=" + postTitle,
-	  },
 	  Sina_Weibo: {
 		title: "Sina Weibo",
 		locale: "en-US",
@@ -524,6 +469,11 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		title: "Slashdot",
 		locale: "en-US",
 		redirect_url: "//slashdot.org/submission?url=" + postUrl,
+	  },
+	  StockTwits: {
+		title: "StockTwits",
+		locale: "en-US",
+		redirect_url: "https://stocktwits.com/widgets/share?body=" + postTitle + " " + postUrl,
 	  },
 	  Svejo: {
 		title: "Svejo",
@@ -559,11 +509,6 @@ function heateorSssMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 		title: "Yoolink",
 		locale: "en-US",
 		redirect_url: "//yoolink.to/addorshare?url_value=" + postUrl + "&title=" + postTitle,
-	  },
-	  YouMob: {
-		title: "YouMob",
-		locale: "en-US",
-		redirect_url: "//youmob.com/startmob.aspx?cookietest=true&mob=" + postUrl,
 	  }
 	}
 	var heateorSssMoreSharingServicesHtml = '<button id="heateor_sss_sharing_popup_close" class="close-button separated"><img src="'+ heateorSssCloseIconPath +'" /></button><div id="heateor_sss_sharing_more_content" data-href="'+ decodeURIComponent(postUrl) +'"><div class="filter"><input type="text" onkeyup="heateorSssFilterSharing(this.value.trim())" placeholder="Search" class="search"></div><div class="all-services"><ul class="mini">';

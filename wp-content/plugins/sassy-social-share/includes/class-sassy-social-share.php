@@ -117,7 +117,7 @@ class Sassy_Social_Share {
 	}
 
 	/**
-	 * Register all of the hooks related to the admin area functionality of the plugin.
+	 * Register all of the hooks related to the admin area functionality of the plugin
 	 *
 	 * @since    1.0.0
 	 */
@@ -132,6 +132,8 @@ class Sassy_Social_Share {
 		add_action( 'wp_ajax_heateor_sss_gdpr_notification_read', array( $plugin_admin, 'gdpr_notification_read' ) );
 		// save Twitter share count notification flag in DB
 		add_action( 'wp_ajax_heateor_sss_twitter_share_notification_read', array( $plugin_admin, 'twitter_share_notification_read' ) );
+		// save Twitcount notification flag in DB
+		add_action( 'wp_ajax_heateor_sss_twitcount_notification_read', array( $plugin_admin, 'twitcount_notification_read' ) );
 		// create admin menu
 		add_action( 'admin_menu', array( $plugin_admin, 'create_admin_menu' ) );
 		// set sanitization callback for plugin options

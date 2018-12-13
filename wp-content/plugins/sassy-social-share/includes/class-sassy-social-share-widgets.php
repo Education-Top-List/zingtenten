@@ -541,7 +541,7 @@ class Sassy_Social_Share_Follow_Widget extends WP_Widget {
 			$html .= '<li class="heateorSssSharingRound"><i style="'. $icon_style .'" alt="RSS Feed" title="RSS Feed" class="heateorSssSharing heateorSssRSSBackground"><a target="_blank" href="'. $instance['rss_feed'] .'" rel="noopener"><ss style="display:block" class="heateorSssSharingSvg heateorSssRSSSvg"></ss></a></i></li>';
 		}
 		$html = apply_filters( 'heateor_sss_follow_icons', $html, $instance, $icon_style );
-		$html .= '<ul>';
+		$html .= '</ul>';
 
 		return $html;
 
@@ -613,52 +613,52 @@ class Sassy_Social_Share_Follow_Widget extends WP_Widget {
 				<option value="round" <?php echo ! isset( $instance['icon_shape'] ) || $instance['icon_shape'] == 'round' ? 'selected' : '' ; ?>><?php _e( 'Round', 'sassy-social-share' ); ?></option>
 				<option value="square" <?php echo isset( $instance['icon_shape'] ) && $instance['icon_shape'] == 'square' ? 'selected' : '' ; ?>><?php _e( 'Square', 'sassy-social-share' ); ?></option>
 			</select><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'facebook' ); ?>"><?php _e( 'Facebook ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'facebook' ); ?>"><?php _e( 'Facebook URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'facebook' ); ?>" name="<?php echo $this->get_field_name( 'facebook' ); ?>" type="text" value="<?php echo $instance['facebook']; ?>" /><br/>
 			<span>https://www.facebook.com/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'twitter' ); ?>"><?php _e( 'Twitter ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'twitter' ); ?>"><?php _e( 'Twitter URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'twitter' ); ?>" name="<?php echo $this->get_field_name( 'twitter' ); ?>" type="text" value="<?php echo $instance['twitter']; ?>" /><br/>
 			<span>https://twitter.com/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'instagram' ); ?>"><?php _e( 'Instagram ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'instagram' ); ?>"><?php _e( 'Instagram URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'instagram' ); ?>" name="<?php echo $this->get_field_name( 'instagram' ); ?>" type="text" value="<?php echo $instance['instagram']; ?>" /><br/>
 			<span>https://www.instagram.com/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'pinterest' ); ?>"><?php _e( 'Pinterest ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'pinterest' ); ?>"><?php _e( 'Pinterest URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'pinterest' ); ?>" name="<?php echo $this->get_field_name( 'pinterest' ); ?>" type="text" value="<?php echo $instance['pinterest']; ?>" /><br/>
 			<span>https://www.pinterest.com/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'behance' ); ?>"><?php _e( 'Behance ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'behance' ); ?>"><?php _e( 'Behance URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'behance' ); ?>" name="<?php echo $this->get_field_name( 'behance' ); ?>" type="text" value="<?php echo $instance['behance']; ?>" /><br/>
 			<span>https://www.behance.net/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'flickr' ); ?>"><?php _e( 'Flickr ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'flickr' ); ?>"><?php _e( 'Flickr URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'flickr' ); ?>" name="<?php echo $this->get_field_name( 'flickr' ); ?>" type="text" value="<?php echo $instance['flickr']; ?>" /><br/>
 			<span>https://www.flickr.com/photos/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'foursquare' ); ?>"><?php _e( 'Foursquare ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'foursquare' ); ?>"><?php _e( 'Foursquare URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'foursquare' ); ?>" name="<?php echo $this->get_field_name( 'foursquare' ); ?>" type="text" value="<?php echo $instance['foursquare']; ?>" /><br/>
 			<span>https://foursquare.com/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'github' ); ?>"><?php _e( 'Github ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'github' ); ?>"><?php _e( 'Github URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'github' ); ?>" name="<?php echo $this->get_field_name( 'github' ); ?>" type="text" value="<?php echo $instance['github']; ?>" /><br/>
 			<span>https://github.com/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'google' ); ?>"><?php _e( 'Google+ ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'google' ); ?>"><?php _e( 'Google+ URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'google' ); ?>" name="<?php echo $this->get_field_name( 'google' ); ?>" type="text" value="<?php echo $instance['google']; ?>" /><br/>
 			<span>https://plus.google.com/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'linkedin' ); ?>"><?php _e( 'LinkedIn ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'linkedin' ); ?>"><?php _e( 'LinkedIn URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'linkedin' ); ?>" name="<?php echo $this->get_field_name( 'linkedin' ); ?>" type="text" value="<?php echo $instance['linkedin']; ?>" /><br/>
 			<span>https://www.linkedin.com/in/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'linkedin_company' ); ?>"><?php _e( 'LinkedIn Company ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'linkedin_company' ); ?>"><?php _e( 'LinkedIn Company URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'linkedin_company' ); ?>" name="<?php echo $this->get_field_name( 'linkedin_company' ); ?>" type="text" value="<?php echo $instance['linkedin_company']; ?>" /><br/>
 			<span>https://www.linkedin.com/company/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'snapchat' ); ?>"><?php _e( 'Snapchat ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'snapchat' ); ?>"><?php _e( 'Snapchat URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'snapchat' ); ?>" name="<?php echo $this->get_field_name( 'snapchat' ); ?>" type="text" value="<?php echo $instance['snapchat']; ?>" /><br/>
 			<span>https://www.snapchat.com/add/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'tumblr' ); ?>"><?php _e( 'Tumblr ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'tumblr' ); ?>"><?php _e( 'Tumblr URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'tumblr' ); ?>" name="<?php echo $this->get_field_name( 'tumblr' ); ?>" type="text" value="<?php echo $instance['tumblr']; ?>" /><br/>
 			<span>https://ID.tumblr.com</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'vimeo' ); ?>"><?php _e( 'Vimeo ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'vimeo' ); ?>"><?php _e( 'Vimeo URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'vimeo' ); ?>" name="<?php echo $this->get_field_name( 'vimeo' ); ?>" type="text" value="<?php echo $instance['vimeo']; ?>" /><br/>
 			<span>https://vimeo.com/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'youtube' ); ?>"><?php _e( 'Youtube ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'youtube' ); ?>"><?php _e( 'Youtube URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'youtube' ); ?>" name="<?php echo $this->get_field_name( 'youtube' ); ?>" type="text" value="<?php echo $instance['youtube']; ?>" /><br/>
 			<span>https://www.youtube.com/user/ID</span><br/><br/>
-			<label for="<?php echo $this->get_field_id( 'youtube_channel' ); ?>"><?php _e( 'Youtube Channel ID:', 'sassy-social-share' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'youtube_channel' ); ?>"><?php _e( 'Youtube Channel URL:', 'sassy-social-share' ); ?></label> 
 			<input style="width: 95%" class="widefat" id="<?php echo $this->get_field_id( 'youtube_channel' ); ?>" name="<?php echo $this->get_field_name( 'youtube_channel' ); ?>" type="text" value="<?php echo $instance['youtube_channel']; ?>" /><br/>
 			<span>https://www.youtube.com/channel/ID</span><br/><br/>
 			<label for="<?php echo $this->get_field_id( 'rss_feed' ); ?>"><?php _e( 'RSS Feed URL:', 'sassy-social-share' ); ?></label> 

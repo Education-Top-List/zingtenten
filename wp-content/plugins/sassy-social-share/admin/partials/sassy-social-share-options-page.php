@@ -777,7 +777,7 @@ defined( 'ABSPATH' ) or die("Cheating........Uh!!");
 						</tbody>
 						<?php
 						$likeButtons = array( 'facebook_share', 'facebook_like', 'facebook_recommend', 'twitter_tweet', 'google_plusone', 'google_plus_share', 'linkedin_share', 'pinterest_pin', 'buffer_share', 'xing_share', 'yummly_share', 'reddit_badge' );
-						$sharingNetworks = array( 'facebook', 'twitter', 'linkedin', 'google_plus', 'print', 'email', 'yahoo', 'reddit', 'digg', 'delicious', 'float_it', 'tumblr', 'vkontakte', 'pinterest', 'xing', 'whatsapp', 'instagram', 'yummly', 'buffer', 'AIM', 'Amazon_Wish_List', 'AOL_Mail', 'App.net', 'Baidu', 'Balatarin', 'BibSonomy', 'Bitty_Browser', 'Blinklist', 'Blogger_Post', 'BlogMarks', 'Bookmarks.fr', 'Box.net', 'BuddyMarks', 'Care2_News', 'CiteULike', 'Comment', 'Copy_Link', 'Diary.Ru', 'Diaspora', 'diHITT', 'Diigo', 'Douban', 'Draugiem', 'DZone', 'Evernote', 'Facebook_Messenger', 'Fark', 'Flipboard', 'Folkd', 'GentleReader', 'Google_Bookmarks', 'Google_Classroom', 'Google_Gmail', 'Hacker_News', 'Hatena', 'Instapaper', 'Jamespot', 'Kakao', 'Kik', 'Kindle_It', 'Known', 'Line', 'LiveJournal', 'Mail.Ru', 'Mendeley', 'Meneame', 'mix', 'Mixi', 'MySpace', 'Netlog', 'Netvouz', 'NewsVine', 'NUjij', 'Odnoklassniki', 'Oknotizie', 'Outlook.com', 'Papaly', 'Pinboard', 'Plurk', 'Pocket', 'Polyvore', 'PrintFriendly', 'Protopage_Bookmarks', 'Pusha', 'Qzone', 'Rediff MyPage', 'Refind', 'Renren', 'Segnalo', 'Sina Weibo', 'SiteJot', 'Skype', 'Slashdot', 'SMS', 'StockTwits', 'Stumpedia', 'Svejo', 'Symbaloo_Feeds', 'Telegram', 'Trello', 'Tuenti', 'Twiddla', 'TypePad_Post', 'Viadeo', 'Viber', 'Wanelo', 'Webnews', 'WordPress', 'Wykop', 'Yahoo_Mail', 'Yahoo_Messenger', 'Yoolink', 'YouMob' );
+						$sharingNetworks = array( 'facebook', 'twitter', 'linkedin', 'google_plus', 'print', 'email', 'reddit', 'digg', 'float_it', 'tumblr', 'vkontakte', 'pinterest', 'xing', 'whatsapp', 'instagram', 'yummly', 'buffer', 'AIM', 'Amazon_Wish_List', 'AOL_Mail', 'App.net', 'Balatarin', 'BibSonomy', 'Bitty_Browser', 'Blinklist', 'Blogger_Post', 'BlogMarks', 'Bookmarks.fr', 'Box.net', 'BuddyMarks', 'Care2_News', 'CiteULike', 'Comment', 'Copy_Link', 'Diary.Ru', 'Diaspora', 'Diigo', 'Douban', 'Draugiem', 'DZone', 'Evernote', 'Facebook_Messenger', 'Fark', 'Flipboard', 'Folkd', 'GentleReader', 'Google_Bookmarks', 'Google_Classroom', 'Google_Gmail', 'Hacker_News', 'Hatena', 'Instapaper', 'Jamespot', 'Kakao', 'Kik', 'Kindle_It', 'Known', 'Line', 'LiveJournal', 'Mail.Ru', 'Mendeley', 'Meneame', 'mix', 'Mixi', 'MySpace', 'Netvouz', 'Odnoklassniki', 'Outlook.com', 'Papaly', 'Pinboard', 'Plurk', 'Pocket', 'PrintFriendly', 'Protopage_Bookmarks', 'Pusha', 'Qzone', 'Rediff MyPage', 'Refind', 'Renren', 'Sina Weibo', 'SiteJot', 'Skype', 'Slashdot', 'SMS', 'StockTwits', 'Svejo', 'Symbaloo_Feeds', 'Telegram', 'Threema', 'Trello', 'Tuenti', 'Twiddla', 'TypePad_Post', 'Viadeo', 'Viber', 'Wanelo', 'Webnews', 'WordPress', 'Wykop', 'Yahoo_Mail', 'Yoolink' );
 						?>
 						
 						<tr>
@@ -850,7 +850,7 @@ defined( 'ABSPATH' ) or die("Cheating........Uh!!");
 						<tr>
 							<th colspan="2">
 							<img id="heateor_sss_providers_help" class="heateor_sss_help_bubble" src="<?php echo plugins_url( '../../images/info.png', __FILE__ ) ?>" />
-							<label><?php _e("Select Sharing Services", 'sassy-social-share' ); ?></label>
+							<label><?php _e( "Select Sharing Services", 'sassy-social-share' ); ?></label>
 							</th>
 						</tr>
 
@@ -865,7 +865,7 @@ defined( 'ABSPATH' ) or die("Cheating........Uh!!");
 						<tr>
 							<td colspan="2" class="selectSharingNetworks">
 							<?php
-							foreach( $likeButtons as $likeButton) {
+							foreach( $likeButtons as $likeButton ) {
 								?>
 								<div class="heateorSssHorizontalSharingProviderContainer">
 								<input id="heateor_sss_<?php echo $likeButton ?>" type="checkbox" <?php echo isset( $options['horizontal_re_providers'] ) && in_array( $likeButton, $options['horizontal_re_providers'] ) ? 'checked = "checked"' : '';?> value="<?php echo $likeButton ?>" />
@@ -1019,6 +1019,7 @@ defined( 'ABSPATH' ) or die("Cheating........Uh!!");
 							<input id="heateor_sss_counts" name="heateor_sss[horizontal_counts]" type="checkbox" <?php echo isset( $options['horizontal_counts'] ) ? 'checked = "checked"' : '';?> value="1" />
 							<br/>
 							<span class="heateor_sss_help_content" style="display:block"><?php _e( 'Share counts are supported for Facebook, Twitter, Linkedin, Buffer, Reddit, Pinterest, Odnoklassniki and Vkontakte', 'sassy-social-share' ) ?></span>
+							<span class="heateor_sss_help_content" style="display:block"><strong><?php echo sprintf( __( 'To show Twitter share count, you have to click "Give me my Twitter counts back" button at <a href="%s" target="_blank">TwitCount.com</a> and register your website %s with them. No need to copy-paste any code from their website.', 'sassy-social-share' ), 'http://twitcount.com', home_url() ) ?></strong></span>
 							</td>
 						</tr>
 						
@@ -1028,29 +1029,6 @@ defined( 'ABSPATH' ) or die("Cheating........Uh!!");
 							<?php _e( 'If enabled, share counts are displayed above sharing icons.', 'sassy-social-share' ) ?>
 							<img width="550" src="<?php echo plugins_url( '../../images/snaps/sss_share_count.png', __FILE__ ); ?>" />
 							</div>
-							</td>
-						</tr>
-
-						<?php
-						$tweet_count_service = 'newsharecounts';
-						if ( isset( $options['tweet_count_service'] ) ) {
-							$tweet_count_service = $options['tweet_count_service'];
-						} elseif ( isset( $options['vertical_tweet_count_service'] ) ) {
-							$tweet_count_service = $options['vertical_tweet_count_service'];
-						}
-						?>
-
-						<tr id="heateor_sss_twitter_share_count" <?php echo isset( $options['horizontal_counts'] ) ? '' : 'style="display:none"' ?>>
-							<th>
-							</th>
-							<td>
-							<input id="heateor_sss_newsharecounts" name="heateor_sss[tweet_count_service]" type="radio" <?php echo $tweet_count_service == 'newsharecounts' ? 'checked = "checked"' : '';?> value="newsharecounts" /><label for="heateor_sss_newsharecounts"><?php echo sprintf( __( 'Use <a href="%s" target="_blank">NewShareCounts</a> to show Twitter share counts', 'sassy-social-share' ), 'http://newsharecounts.com' ) ?></label>
-							<br/>
-							<span class="heateor_sss_help_content" style="display:block"><?php echo sprintf( __( 'For this to work, you have to enter your website url %s and sign in using Twitter at <a href="%s" target="_blank">their website</a>', 'sassy-social-share' ), home_url(), 'http://newsharecounts.com' ) ?></span>
-							<br/>
-							<input id="heateor_sss_opensharecount" name="heateor_sss[tweet_count_service]" type="radio" <?php echo $tweet_count_service == 'opensharecount' ? 'checked = "checked"' : '';?> value="opensharecount" /><label for="heateor_sss_opensharecount"><?php echo sprintf( __( 'Use <a href="%s" target="_blank">OpenShareCount</a> to show Twitter share counts', 'sassy-social-share' ), 'http://opensharecount.com' ) ?></label>
-							<br/>
-							<span class="heateor_sss_help_content" style="display:block"><?php echo sprintf( __( 'For this to work, you have to sign up and register your website url %s at <a href="%s" target="_blank">their website</a>', 'sassy-social-share' ), home_url(), 'http://opensharecount.com' ) ?></span>
 							</td>
 						</tr>
 
@@ -1457,12 +1435,13 @@ defined( 'ABSPATH' ) or die("Cheating........Uh!!");
 						<tr>
 							<th>
 							<img id="heateor_sss_vertical_count_help" class="heateor_sss_help_bubble" src="<?php echo plugins_url( '../../images/info.png', __FILE__ ) ?>" />
-							<label for="heateor_sss_vertical_counts"><?php _e("Show share counts", 'sassy-social-share' ); ?></label>
+							<label for="heateor_sss_vertical_counts"><?php _e( "Show share counts", 'sassy-social-share' ); ?></label>
 							</th>
 							<td>
 							<input id="heateor_sss_vertical_counts" name="heateor_sss[vertical_counts]" type="checkbox" <?php echo isset( $options['vertical_counts'] ) ? 'checked = "checked"' : '';?> value="1" />
 							<br/>
 							<span class="heateor_sss_help_content" style="display:block"><?php _e( 'Share counts are supported for Facebook, Twitter, Linkedin, Buffer, Reddit, Pinterest, Odnoklassniki and Vkontakte', 'sassy-social-share' ) ?></span>
+							<span class="heateor_sss_help_content" style="display:block"><strong><?php echo sprintf( __( 'To show Twitter share count, you have to click "Give me my Twitter counts back" button at <a href="%s" target="_blank">TwitCount.com</a> and register your website %s with them. No need to copy-paste any code from their website.', 'sassy-social-share' ), 'http://twitcount.com', home_url() ) ?></strong></span>
 							</td>
 						</tr>
 						
@@ -1475,24 +1454,10 @@ defined( 'ABSPATH' ) or die("Cheating........Uh!!");
 							</td>
 						</tr>
 
-						<tr id="heateor_sss_twitter_vertical_share_count" <?php echo isset( $options['vertical_counts'] ) ? '' : 'style="display:none"' ?>>
-							<th>
-							</th>
-							<td>
-							<input id="heateor_sss_vertical_newsharecounts" name="heateor_sss[vertical_tweet_count_service]" type="radio" <?php echo $tweet_count_service == 'newsharecounts' ? 'checked = "checked"' : '';?> value="newsharecounts" /><label for="heateor_sss_vertical_newsharecounts"><?php echo sprintf( __( 'Use <a href="%s" target="_blank">NewShareCounts</a> to show Twitter share counts', 'sassy-social-share' ), 'http://newsharecounts.com' ) ?></label>
-							<br/>
-							<span class="heateor_sss_help_content" style="display:block"><?php echo sprintf( __( 'For this to work, you have to enter your website url %s and sign in using Twitter at <a href="%s" target="_blank">their website</a>', 'sassy-social-share' ), home_url(), 'http://newsharecounts.com' ) ?></span>
-							<br/>
-							<input id="heateor_sss_vertical_opensharecount" name="heateor_sss[vertical_tweet_count_service]" type="radio" <?php echo $tweet_count_service == 'opensharecount' ? 'checked = "checked"' : '';?> value="opensharecount" /><label for="heateor_sss_vertical_opensharecount"><?php echo sprintf( __( 'Use <a href="%s" target="_blank">OpenShareCount</a> to show Twitter share counts', 'sassy-social-share' ), 'http://opensharecount.com' ) ?></label>
-							<br/>
-							<span class="heateor_sss_help_content" style="display:block"><?php echo sprintf( __( 'For this to work, you have to sign up and register your website url %s at <a href="%s" target="_blank">their website</a>', 'sassy-social-share' ), home_url(), 'http://opensharecount.com' ) ?></span>
-							</td>
-						</tr>
-
 						<tr>
 							<th>
 							<img id="heateor_sss_total_vertical_shares_help" class="heateor_sss_help_bubble" src="<?php echo plugins_url( '../../images/info.png', __FILE__ ) ?>" />
-							<label for="heateor_sss_total_vertical_shares"><?php _e("Show total shares", 'sassy-social-share' ); ?></label>
+							<label for="heateor_sss_total_vertical_shares"><?php _e( "Show total shares", 'sassy-social-share' ); ?></label>
 							</th>
 							<td>
 							<input id="heateor_sss_total_vertical_shares" name="heateor_sss[vertical_total_shares]" type="checkbox" <?php echo isset( $options['vertical_total_shares'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1983,8 +1948,12 @@ defined( 'ABSPATH' ) or die("Cheating........Uh!!");
 					<div class="inside faq">
 						<p><?php _e( '<strong>Note:</strong> Plugin will not work on local server. You should have an online website for the plugin to function properly.', 'sassy-social-share' ); ?></p>
 						<p>
-						<a href="javascript:void(0)"><?php _e('Why is Instagram icon redirecting to Instagram website?', 'sassy-social-share'); ?></a>
-						<div><?php _e('Instagram icon is there to send website visitors to the Instagram page of your choice. You can save the desired Instagram handle in "Instagram Username" option in "Standard Interface" and "Floating Interface" sections.', 'sassy-social-share'); ?></div>
+						<a href="javascript:void(0)"><?php _e( 'Why is Instagram icon redirecting to Instagram website?', 'sassy-social-share' ); ?></a>
+						<div><?php _e( 'Instagram icon is there to send website visitors to the Instagram page of your choice. You can save the desired Instagram handle in "Instagram Username" option in "Standard Interface" and "Floating Interface" sections.', 'sassy-social-share' ); ?></div>
+						</p>
+						<p>
+						<a href="javascript:void(0)"><?php _e( 'Why are Twitter shares not appearing even after registering at Twitcount.com?', 'sassy-social-share' ); ?></a>
+						<div><?php _e( "It takes some time for their service to track the shares made on Twitter from your website. If you still feel it's taking too long you can contact their support directly from their website.", 'sassy-social-share' ); ?></div>
 						</p>
 						<p><a href="https://www.heateor.com/recover-social-share-counts/" target="_blank"><?php _e('How to restore Social Share counts lost after moving my website to SSL/Https?', 'sassy-social-share' ) ?></a></p>
 						<p><a href="http://support.heateor.com/how-to-integrate-google-analytics-with-sharing" target="_blank"><?php _e( 'How to integrate Google Analytics with sharing?', 'sassy-social-share' ) ?></a></p>

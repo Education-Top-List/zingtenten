@@ -147,9 +147,9 @@ if ( ! function_exists( 'breadcrumbs' ) ) :
       
         } elseif ( is_single() ) {
           $cat = get_the_category(); $cat = $cat[0];
-          echo '<li>';
-          echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-          echo '</li>';
+          //echo '<li>';
+          //echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+          //echo '</li>';
           echo $currentBefore;
           the_title();
           echo $currentAfter;
@@ -427,6 +427,27 @@ if( isset( $_POST[ 'meta-checkbox' ] ) ) {
  
 }
 add_action( 'save_post', 'sm_meta_save' );
+
+
+// SET LIMIT PAGINATION POST
+
+add_action( 'pre_get_posts',  'set_posts_per_page'  );
+function set_posts_per_page( $query ) {
+
+  global $wp_the_query;
+
+  if ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_search() ) ) {
+    $query->set( 'posts_per_page', 6 );
+  }
+  elseif ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_archive() ) ) {
+    $query->set( 'posts_per_page', 40 );
+  }
+  // Etc..
+
+  return $query;
+}
+
+// WIDGET LIST POST CATEGORY 
 
 
 

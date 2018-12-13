@@ -20,16 +20,16 @@
 
 // ** Thiết lập MySQL - Bạn có thể lấy các thông tin này từ host/server ** //
 /** Tên database MySQL */
-define('DB_NAME', 'gtheme01');
+define('DB_NAME', 'ten_database');
 
 /** Username của database */
-define('DB_USER', 'root');
+define('DB_USER', 'username');
 
 /** Mật khẩu của database */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'mat_khau');
 
 /** Hostname của database */
-define('DB_HOST', '138.197.101.168');
+define('DB_HOST', 'localhost');
 
 /** Database charset sử dụng để tạo bảng database. */
 define('DB_CHARSET', 'utf8');
