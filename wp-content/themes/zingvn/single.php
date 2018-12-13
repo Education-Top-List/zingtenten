@@ -18,16 +18,16 @@ get_header();
 									<?php  echo breadcrumbs(); ?>
 								</ul>
 							</div> 
-							    <?php 
-							    $categories = get_the_category();
-								$cat_post_id = $categories[0]->term_id;
-								
-                           ?>
+							<?php 
+							$categories = get_the_category();
+							$cat_post_id = $categories[0]->term_id;
+							
+							?>
 							<article class="content_single_post cat_post_<?php echo $cat_post_id;?>">
 								<div class="single_post_info">
 									<h2><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
 									<p><?php the_time('d/m/y');?><span>  <?php the_time('g:i a') ?></span> | by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php the_author(); ?></a>
-										 <span class="post_in">| Post in</span>
+										<span class="post_in">| Post in</span>
 										<?php	
 										$seperator = ", ";
 										$output = '';
@@ -59,27 +59,34 @@ get_header();
 
 							<?php $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 6, 'post__not_in' => array($post->ID) ) ); ?>
 							<?php if($related){ ?>
-							<div class="related_posts">
-								<h2>Tin cùng chuyên mục</h2>
-								<ul class="row"> 
-									<?php
-									
-									if( $related ) foreach( $related as $post ) {
-										setup_postdata($post); ?>
+								<div class="related_posts">
+									<h2>Tin cùng chuyên mục</h2>
+									<ul class="row"> 
+										<?php
+										
+										if( $related ) foreach( $related as $post ) {
+											setup_postdata($post); ?>
 
-										<li class="col-md-4 col-sm-4 col-xs-12">
-											<div class="list_item_related pw">
-											<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></figure>
-											<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-											</div>
-									
-										</li>
+											<li class="col-md-4 col-sm-4 col-xs-12">
+												<div class="list_item_related pw">
+													
+													<div class="wrap_thumb">
+														<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
+														<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
+															<a href="<?php the_permalink();?>"></a>
+														</figure>
+													</div>
+													<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
 
-									<?php }
-									wp_reset_postdata(); ?>
-								</ul>   
-							</div>
-						<?php } ?> 
+												</div>
+												
+											</li>
+
+										<?php }
+										wp_reset_postdata(); ?>
+									</ul>   
+								</div>
+							<?php } ?> 
 						</div>
 						<div class="col-md-3 col-sm-3 sidebar">
 							<?php dynamic_sidebar('sidebar1'); ?> 

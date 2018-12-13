@@ -105,7 +105,7 @@
                      </div>
                   </div>
                </div>
-               <div class="col-sm-3">
+               <div class="col-sm-3 sidebar sidebar_top_idx">
                   <?php dynamic_sidebar('Sidebar_Index_Top'); ?> 
                </div>
             </div>

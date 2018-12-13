@@ -43,12 +43,12 @@
 					{
 						breakpoint: 600,
 						settings: {
-							slidesToShow: 1,
+							slidesToShow: 2,
 							slidesToScroll: 1
 						}
 					},
 					{
-						breakpoint: 480,
+						breakpoint: 400,
 						settings: {
 							slidesToShow: 1,
 							slidesToScroll: 1
@@ -56,5 +56,46 @@
 					}
 					]
 				});
+
+		// MENU MOBILE
+		jQuery(".icon_mobile_click").click(function(){
+			jQuery(this).fadeOut(300);
+			jQuery("#page_wrapper").addClass('page_wrapper_active');
+			jQuery("#menu_mobile_full").addClass('menu_show').stop().animate({left: "0px"},260);
+			jQuery(".close_menu, .bg_opacity").show();
+		});
+		jQuery(".close_menu").click(function(){
+			jQuery(".icon_mobile_click").fadeIn(300);
+			jQuery("#menu_mobile_full").animate({left: "-260px"},260).removeClass('menu_show');
+			jQuery("#page_wrapper").removeClass('page_wrapper_active');
+			jQuery(this).hide();
+			jQuery('.bg_opacity').hide();
+		});
+		jQuery('.bg_opacity').click(function(){
+			jQuery("#menu_mobile_full").animate({left: "-260px"},260).removeClass('menu_show');
+			jQuery("#page_wrapper").removeClass('page_wrapper_active');
+			jQuery('.close_menu').hide();
+			jQuery(this).hide();
+			jQuery('.icon_mobile_click').fadeIn(300);
+		});
+		jQuery("#menu_mobile_full ul li a").click(function(){
+			jQuery(".icon_mobile_click").fadeIn(300);
+			jQuery("#page_wrapper").removeClass('page_wrapper_active');
+		});
+		jQuery('.mobile-menu ul.menu').children().has('ul.sub-menu').click(function(){
+			jQuery(this).children('ul').slideToggle();
+			jQuery(this).siblings().has('ul.sub-menu').find('ul.sub-menu').slideUp();
+		}).children('ul').children().click(function(event){event.stopPropagation()});
+		jQuery('.mobile-menu ul.menu').children().find('ul.sub-menu').children().has('ul.sub-menu').click(function(){
+			jQuery(this).find('ul.sub-menu').slideToggle();
+		});
+		jQuery('.mobile-menu ul.menu li').has('ul.sub-menu').click(function(event){
+			jQuery(this).toggleClass('editBefore_mobile');
+		});
+		jQuery('.mobile-menu ul.menu').children().has('ul.sub-menu').addClass('menu-item-has-children');
+		jQuery('.mobile-menu ul.menu li').click(function(){
+			$(this).addClass('active').siblings().removeClass('active, editBefore_mobile');
+		});
+
 	});
 	

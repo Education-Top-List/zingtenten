@@ -102,6 +102,139 @@ article.post{
 .go_scrolltop{
     right: 20px;
 }
+/* MENU MOBILE*/
+ .icon_mobile_click {
+     margin: 0px;
+     cursor: pointer;
+     z-index: 99;
+     display: none;
+     position: absolute;
+     top:10px;
+     right: 10px;
+     cursor: pointer;
+}
+ .icon_mobile_click i.fa{
+     font-size: 30px;
+     color: #fff;
+}
+ .top_header{
+     position: relative;
+}
+ #page_wrapper{
+     transition: all 0.3s;
+}
+ #menu_mobile_full{
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     width:260px;
+     left:-260px;
+     background-color: #f0a52b;
+     -webkit-transition: -webkit-transform .3s ease;
+     -moz-transition: -moz-transform .3s ease;
+     -o-transition: -o-transform .3s ease;
+     transition: transform .3s ease;
+     z-index: 9999999;
+     border-right: 1px solid #fff;
+     overflow:auto;
+}
+ .bg_opacity{
+     position: fixed;
+     width: 100%;
+     background: rgba(0,0,0,0.5);
+     top: 0;
+     bottom: 0;
+     z-index: 999999;
+     display: none;
+}
+ .menu_hidden{
+     z-index: -1;
+     left: -260px;
+}
+ .menu_show{
+     z-index: 9999999;
+}
+ #menu_mobile_full .close_menu {
+     padding: 10px;
+     font-size: 20px;
+     text-align: right;
+     color: #fff;
+     background: none;
+     cursor: pointer;
+     position: absolute;
+     right: 0px;
+     background: #f0a52b;
+     display: none;
+     cursor: pointer;
+     top: 0px;
+     border: 1px solid #fff;
+     z-index: 999;
+}
+ #menu_mobile_full .mobile-menu {
+     margin: 55px 0px 0px 0px;
+}
+ #menu_mobile_full ul li:not(.menu-item-has-children){
+     padding:0px;
+}
+ #menu_mobile_full ul.menu>li:not(.menu-item-has-children)>a{
+     padding: 15px 0px 15px 10px;
+     display: block;
+}
+ #menu_mobile_full ul li{
+     width: 100%;
+     display: block;
+}
+ #menu_mobile_full ul li{
+     position: relative;
+     padding: 15px 0px 15px 10px;
+     border-bottom: 1px solid #fff;
+}
+ #menu_mobile_full ul li a{
+     color: #fff;
+     text-transform: uppercase;
+}
+ #menu_mobile_full ul li a:hover{
+     text-decoration: none;
+     background:none;
+}
+ #menu_mobile_full li span{
+     margin:0px 0px 0px 10px;
+}
+ #menu_mobile_full .sub-menu{
+     display: none;
+     padding: 0px 0px 0px 0px;
+     border-top: 1px solid #fff;
+     margin: 10px 0px 0px 0px;
+}
+ #menu_mobile_full .sub-menu li{
+     padding:15px 0px 15px 15px;
+}
+ #menu_mobile_full .sub-menu li:last-child{
+     border-bottom: none;
+}
+ #menu_mobile_full .sub-menu>li>a{
+     font-size: 14px;
+     text-transform: none;
+     display: block;
+     padding:10px 0px 10px 10px;
+}
+ #menu_mobile_full .sub-menu>li:last-child>a{
+     padding:10px 0px 0px 10px;
+}
+ .editBefore_mobile::before {
+     content: "-" !important;
+}
+ #menu_mobile_full li.menu-item-has-children::before{
+     content: "+";
+     position: absolute;
+     right: 10px;
+     top: 15px;
+     color: #fff;
+}
+
+/* END INCLUDE */
+
+
 /* CSS HEADER */
 .logo_site{
     max-width: 90px;
@@ -124,7 +257,7 @@ article.post{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9;
+    z-index: 9999;
     width: 100%;
 }
 .fixedheader .logo_site{
@@ -342,7 +475,7 @@ margin:0px 0px 5px 0px;
 
 h2.post_title a{
     font-size: 15px;
-    line-height: 20px;
+    line-height: 23px;
     color:#000;
     display: inline-block;
     font-weight: 700;
@@ -588,16 +721,11 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     margin:30px 0px 20px 0px;
 }
 
-.related_posts ul li .thumbnail {
+.related_posts ul li .wrap_thumb {
     height: 170px;
     position: relative;
 }
-.related_posts ul li .thumbnail img{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform:translate(-50%,-50%);
-}
+
 .related_posts ul li h4{
     margin:10px 0px 0px 0px;
 }
@@ -609,7 +737,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
     font-weight: 700;
     display: inline-block;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 22px;
 }
 .related_posts ul li{
    margin:0px 0px 30px 0px;
@@ -941,12 +1069,9 @@ border-radius: 10px;
 .multimedia ul.list_categories{
     float:right;
     border:none;
+    margin:0px 0px 20px 0px;
 }
-.multimedia ul.list_categories li a{
-color: #000;
-    font-size: 20px;
-    font-weight: normal;
-}
+.multimedia ul.list_categories li a{color: #000;font-size: 16px;font-weight: normal;}
 .content_multi{
     clear: both;
 }
@@ -1114,4 +1239,108 @@ display: table;
 
 .large-columns-4 .flickity-slider>.col{
     max-width: 24% !important;
+}
+
+
+@media(max-width: 767px){
+    .icon_mobile_click{
+        display: block;
+        top:14px;
+    }
+    .nav_primary{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    .logo_site{
+        max-width: 60px;
+        margin:5px 0px 2px 0px;
+    }
+    .wrap_search_f{
+            min-width: 180px;
+    margin: 0px 30px 0px 0px;
+    }
+    .search_header{
+        margin:6px 0px 0px 0px;
+    }
+    .hot_big_post_area .hot_big_post .thumbnail{
+            height: 180px;
+    }
+    .fixedheader .search_header{
+        margin:6px 0px 0px 0px;
+    }
+    .hot_big_post h2 a{
+        line-height: 29px;
+    font-size: 21px;
+    }
+    .hot_big_post h2{
+        margin:10px 0px;
+    }
+    .news_scroll ul>li:nth-child(5)~li{
+        display: none !important;
+    }
+    .news_scroll .post_cmt_wrapper .wrap_thumb{
+        height: 150px;
+    }
+    .multimedia>h4{
+        font-size: 22px;
+        margin: 0px 0px 15px 0px;
+        float:none;
+        display: block;
+        text-align: center;
+    }
+    .multimedia ul.list_categories{
+           float: none;
+    display: table;
+    width: 100%;
+    }
+    .multimedia .list_categories li {
+    float: left;
+    padding: 0px;
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    }
+    .multimedia .content_multi ul>li:nth-child(3) h2.post_title{
+        position: relative;
+    bottom: initial;
+    left: initial;
+    background: none;
+    padding: 0px;
+    line-height: 15px;
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+    }
+    .multimedia .content_multi ul>li:nth-child(3){
+        width: 100%;
+    }
+    .multimedia .content_multi ul>li:nth-child(3) .wrap_thumb{
+        height: 150px;
+    }
+    .multimedia .content_multi ul>li:nth-child(3) h2.post_title a{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .multimedia{
+        padding:30px 15px 0px 15px;
+    }
+}
+
+@media(min-width: 400px) and (max-width: 767px){
+    .multimedia .content_multi ul li{
+        width:50% !important;
+        float:left; 
+    }
+     .multimedia .content_multi ul li:nth-child(2n+1){
+        clear: both;
+     }
+     .list_hot_post_others .item_list_hot figure{
+        height: 100px;
+     }
+    .news_scroll .post_cmt_wrapper .wrap_thumb {
+            height: 190px;
+     }
 }
