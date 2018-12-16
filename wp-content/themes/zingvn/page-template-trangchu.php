@@ -9,10 +9,10 @@
       <div class="content_top">
          <div class="container">
             <div class="row">
-               <div class="col-sm-9">
+               <div class="col-sm-9 content_top_left">
                   <div class="hot_big_post_area">
                      <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-sm-9 ">
                            <div class="hot_big_post pw">
                               <?php
                                  $args = array(
@@ -146,7 +146,7 @@
                      $multi_q->query($arg_multi); 
                      ?>
                   <?php if ( have_posts() ) : while ( $multi_q->have_posts() ) : $multi_q->the_post(); ?>
-                  <li class="pw col-md-3">
+                  <li class="pw col-sm-3">
                      <div class="wrap_thumb">
                         <?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
                         <figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>');"> 
@@ -165,7 +165,7 @@
       <div class="content_bottom">
          <div class="container">
             <div class="row">
-               <div class="col-sm-9 col-xs-12">
+               <div class="col-sm-9 col-xs-12 content_bottom_left">
                   <div class="wrap_list_idx">
                      <?php    
                         $parent  = get_categories(array('parent'=>0)); 

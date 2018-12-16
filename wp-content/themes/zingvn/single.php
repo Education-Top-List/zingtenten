@@ -12,7 +12,7 @@ get_header();
 				<?php 
 				if(have_posts()) :
 					while(have_posts()) : the_post(); ?>
-						<div class="col-md-9 col-sm-3  content_left">
+						<div class="col-sm-9   content_left">
 							<div id="breadcrumb" class="breadcrumb">
 								<ul>
 									<?php  echo breadcrumbs(); ?>

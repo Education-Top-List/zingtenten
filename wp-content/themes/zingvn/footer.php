@@ -6,20 +6,23 @@
 	<div class="container">
 		<div class="row">
 			<?php if(is_active_sidebar('footer1')) :?>
-				<div class="footer-widget-area col-md-4">
+				<div class="footer-widget-area col-sm-4">
 					<?php dynamic_sidebar('footer1'); ?>
 				</div>
 			<?php endif ?>
 			<?php if(is_active_sidebar('footer2')) :?>
-				<div class="footer-widget-area  col-md-4">
+				<div class="footer-widget-area  col-sm-4">
 					<?php dynamic_sidebar('footer2'); ?>
 				</div>
 			<?php endif ?>
 			<?php if(is_active_sidebar('footer3')) :?>
-				<div class="footer-widget-area  col-md-4">
+				<div class="footer-widget-area  col-sm-4">
 					<?php dynamic_sidebar('footer3'); ?>
 				</div>
 			<?php endif ?>
+		</div>
+		<div class="copyright">
+			<p>Thiết kế bởi Yang</p>
 		</div>
 	</div>
 </footer>
